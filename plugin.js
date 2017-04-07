@@ -43,6 +43,9 @@
 		};
 
 
+		/**
+		 * Generate Events
+		 */
 		addEvents = function(){
 			return;
 		};
