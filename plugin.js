@@ -25,29 +25,18 @@
 			option3: null,
 
 			// events
-			create: null,
-			open: null
+			create: function(){},
+			open: function(){}
 
 		};
 		$.extend(true, options, pOptions);
 
 
 		/**
-		 * Helper Check if Parameter is a Funktion
-		 * @param f
-		 * @returns {*|boolean}
-		 */
-		helper.isFunction = function(f) {
-			var getType = {};
-			return f && getType.toString.call(f) === '[object Function]';
-		};
-
-
-		/**
 		 * Generate Events
 		 */
-		addEvents = function(){
-			return;
+		var addEvents = function(){
+			return self;
 		};
 
 
@@ -66,9 +55,7 @@
 			addEvents();
 
 			// event:create
-			if(helper.isFunction(options.create)){
-				options.create(self);
-			}
+			options.create.call(self);
 
 			return self.isInit;
 		};
