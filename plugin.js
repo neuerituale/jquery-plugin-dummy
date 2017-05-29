@@ -1,5 +1,5 @@
 /**
- * PluginName jQuery-Plugin
+ * Pluginname jQuery-Plugin
  * author Julian Winkel <winkel@neuerituale.com>
  */
 
@@ -7,19 +7,14 @@
 	'use strict';
 
 	/**
-	 * main Function
-	 * @param el
-	 * @param pOptions
-	 * @constructor
+	 * Pluginname
 	 */
-	function PluginName(el, pOptions) {
+	$.Pluginname = function(el, options) {
 
 		var self = this;
 		var helper = {};
 
-		self.isInit = false;
-
-		var options = {
+		var defaults = {
 			option1: null,
 			option2: null,
 			option3: null,
@@ -29,54 +24,52 @@
 			open: function(){}
 
 		};
-		$.extend(true, options, pOptions);
 
+		self.settings = $.extend({}, defaults, options);
+		self.$context = $(el);
 
 		/**
-		 * Generate Events
+		 * private Function
+		 * @returns {*}
 		 */
-		var addEvents = function(){
+		var _private = function(){
 			return self;
 		};
 
+		/**
+		 * public Function
+		 * @returns {*}
+		 */
+		self.public = function(){
+			return self;
+		};
 
 		/**
 		 * Init the Program
-		 * @returns {boolean}
 		 */
-		var init = function() {
-			if(self.isInit) {
-				return false;
-			}
-			self.isInit = true;
-
-			self.$el = $(el);
-
-			addEvents();
+		self.init = function() {
 
 			// event:create
 			options.create.call(self);
 
-			return self.isInit;
+			return self;
 		};
 
-		/**
-		 * Run
-		 */
-		init();
-	}
+
+		self.init();
+	};
 
 	/**
 	 * Extend jQuery
-	 * @param pOptions
+	 * @param options
 	 * @returns {*}
 	 */
-	$.fn.PluginJQueryName = function(pOptions) {
+	$.fn.pluginname = function(options) {
 
 		// each element
 		return this.each(function() {
-			if(this.PluginJQueryName == undefined) {
-				this.PluginJQueryName = new PluginName(this, pOptions);
+			if(undefined == $(this).data('pluginname')) {
+				$(this).data('pluginname', new $.Pluginname(this, options));
 			}
 		});
 
