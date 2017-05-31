@@ -50,7 +50,7 @@
 		self.init = function() {
 
 			// event:create
-			options.create.call(self);
+			self.settings.create.call(self);
 
 			return self;
 		};
