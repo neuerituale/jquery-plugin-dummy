@@ -1,7 +1,18 @@
 # README #
 
-Template for jQuery Plugin
+Template for jQuery Plugins
 
-### Contribution guidelines ###
+### Use ###
 
-TBA
+```javascript
+// init plugin
+$('.selectors').pluginname({
+	option1: 'HELLO WORLD'
+});
+
+// instance
+var $instance = $('.selectors').pluginname().data('pluginname');
+
+// do something
+$instance.public();
+```

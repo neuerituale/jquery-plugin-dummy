@@ -1,0 +1,17 @@
+{
+  "name": "jquery-plugin-dummy",
+  "description": "Template for jQuery Plugins",
+  "main": "plugin.js",
+  "authors": [
+    "Julian Winkel <winkel@neuerituale.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/neuerituale/jquery-plugin-dummy",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

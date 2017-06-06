@@ -1,0 +1,19 @@
+{
+  "name": "jquery-plugin-dummy",
+  "version": "1.0.0",
+  "description": "Template for jQuery Plugins",
+  "main": "plugin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neuerituale/jquery-plugin-dummy.git"
+  },
+  "author": "Julian Winkel <winkel@neuerituale.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neuerituale/jquery-plugin-dummy/issues"
+  },
+  "homepage": "https://github.com/neuerituale/jquery-plugin-dummy#readme"
+}
